@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Notebook</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Notebook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/9Jimmy?tab=projects">My other projects<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <div class="mt-5"></div>
+
+<form method="post" action="filter">
+    <div class="form-inline">
+        <input type="text" name="filter" class="form-control shadow p-4 mb-4 bg-white" size="56" placeholder="Enter tag to find note">
+        <button type="submit" style="display: none" class="btn btn-primary ml-2">Find</button>
+    </div>
+</form>
+    <div>
+        <form method="post" action="/">
+            <div class="form-inline">
+                <input type="text" name="tag" class="form-control mr-2 shadow p-4 mb-4 bg-white" placeholder="Tag"/>
+                <input type="text" name="text" class="form-control mr-2 shadow p-4 mb-4 bg-white" size="23" placeholder="Enter you note"/>
+                <button type="submit" style="display: none" class="btn btn-primary">Note down</button>
+            </div>
+        </form>
+    </div>
+    <div class="card-columns">
+    {{#notes}}
+            <div class="card m-2 border-primary mb-3">
+                <div class="card-body text-primary">
+                <h5 class="card-title"><i>{{tag}}</i></h5>
+                <p class="card-text"><span>{{text}}</span></p>
+            </div>
+            </div>
+    {{/notes}}
+    </div>
+</body>
+</div>
+</html>
+
+
+
