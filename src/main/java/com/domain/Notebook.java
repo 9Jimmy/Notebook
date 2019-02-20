@@ -1,10 +1,13 @@
 package com.domain;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
 @Data
+@RequiredArgsConstructor
 public class Notebook {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -13,14 +16,13 @@ public class Notebook {
     private String tag;
     private String text;
 
-    public Notebook() {
-    }
-
     public Notebook(String tag, String text) {
         this.tag = tag;
         this.text = text;
     }
-    
+
+    /*public Notebook() {}
+
     public Integer getId() {
         return id;
     }
@@ -43,6 +45,5 @@ public class Notebook {
 
     public void setText(String text) {
         this.text = text;
-    }
-                                                                                 
+    }*/
 }
