@@ -1,26 +1,25 @@
 package com.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Notebook {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
 
     private String tag;
     private String text;
+    private Date date;
 
-    public Notebook() {
-    }
-
-    public Notebook(String tag, String text) {
+    public Notebook(String tag, String text, Date date) {
         this.tag = tag;
         this.text = text;
+        this.date = date;
     }
+
+    public Notebook() {}
 
     public Integer getId() {
         return id;
