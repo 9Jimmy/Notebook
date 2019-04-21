@@ -1,3 +1,3 @@
-# Notebook
+## Notebook
 
-Simple notebook with Java Spring Boot
+Before launching you need to create 'notebook' database
