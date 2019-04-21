@@ -1,9 +1,18 @@
 package com.domain;
 
+<<<<<<< HEAD
 import javax.persistence.*;
 import java.util.Date;
+=======
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+import javax.persistence.*;
+>>>>>>> 41bfb2a3f35bd6948124586c47d16bbd4a567ac1
 
 @Entity
+@Data
+@RequiredArgsConstructor
 public class Notebook {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -13,13 +22,21 @@ public class Notebook {
     private String text;
     private Date date;
 
+<<<<<<< HEAD
     public Notebook(String tag, String text, Date date) {
+=======
+    public Notebook(String tag, String text) {
+>>>>>>> 41bfb2a3f35bd6948124586c47d16bbd4a567ac1
         this.tag = tag;
         this.text = text;
         this.date = date;
     }
 
+<<<<<<< HEAD
     public Notebook() {}
+=======
+    /*public Notebook() {}
+>>>>>>> 41bfb2a3f35bd6948124586c47d16bbd4a567ac1
 
     public Integer getId() {
         return id;
@@ -43,5 +60,5 @@ public class Notebook {
 
     public void setText(String text) {
         this.text = text;
-    }
+    }*/
 }
